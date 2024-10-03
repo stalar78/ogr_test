@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stalar78/ogr_test/static/css/main.961ba5e1.css",
+    "main.js": "/stalar78/ogr_test/static/js/main.a9d7993c.js",
+    "index.html": "/stalar78/ogr_test/index.html",
+    "main.961ba5e1.css.map": "/stalar78/ogr_test/static/css/main.961ba5e1.css.map",
+    "main.a9d7993c.js.map": "/stalar78/ogr_test/static/js/main.a9d7993c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.961ba5e1.css",
+    "static/js/main.a9d7993c.js"
+  ]
+}
