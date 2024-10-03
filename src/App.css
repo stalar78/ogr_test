@@ -1,38 +1,295 @@
-.App {
+/* Общие стили для страницы */
+body {
+  font-family: 'Georgia', serif;
+  background: url('https://i.pinimg.com/originals/07/8c/4b/078c4b4dafb10e681a2f81220cf27332.jpg');
+  /*офновной фон*/
+  color: #4a2c2a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-size: cover;
+}
+
+/* Шапка сайта */
+header {
+  background-color: #3c2a22;
+  color: #fff;
+  padding: 10px 0;
+  /* Уменьшаем отступы, чтобы сделать хеддер меньше */
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 2em;
+  /* Уменьшаем размер текста */
+  letter-spacing: 1px;
+  border-bottom: 4px solid #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  /* Для точного позиционирования картинки */
+  background-image: url('https://avatars.mds.yandex.net/i?id=490df270774dc2c4bee1c7250b1192cb_l-10636511-images-thumbs&n=13');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Изображение под заголовком */
+header img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  /* Задаем ширину картинки */
+  height: auto;
+  border-radius: 10px;
+  /* Добавляем закругленные углы для эстетики */
+  border: 3px solid #b03a2e;
+  /* Легкая рамка */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  /* Тень для объемного эффекта */
+}
+
+header h1 {
+  font-size: 1.5em;
+  /* Уменьшаем размер заголовка */
+}
+
+header h2 {
+  font-size: 1.2em;
+  /* Уменьшаем размер подзаголовка */
+}
+
+
+/* Контейнер с основным контентом */
+main {
+  margin: 50px auto;
+  max-width: 900px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Прозрачный белый фон для контента */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  /* Глубокие тени */
+  border-radius: 15px;
+  border: 2px solid #3c2a22;
+  font-family: 'Georgia', serif;
+  background-image: url('https://avatars.mds.yandex.net/i?id=57daa8b4faaa8f66d75edaa1b7f5a647_l-6348765-images-thumbs&n=13');
+  /* Текстура бумаги */
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  background-color: #3c2a22;
+  color: #eee;
+  font-size: 0.9em;
+  background-image: url('https://avatars.mds.yandex.net/i?id=490df270774dc2c4bee1c7250b1192cb_l-10636511-images-thumbs&n=13');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  /* Изменяем цвет текста для лучшей видимости */
+  padding: 15px 0;
+  /* Добавляем отступы */
+}
+
+/* Заголовки */
+h2,
+h3 {
+  color: #b03a2e;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* Параграфы */
+p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin: 15px 0;
+  font-family: 'Times New Roman', Times, serif;
+  color: #4a2c2a;
+}
+
+/* Вопросы и варианты ответов */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f2e8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #8c7352;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+li:hover {
+  background-color: #f4e5d1;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  font-size: 1.4em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Кнопки */
+button {
+  padding: 15px 40px;
+  background-color: #8c7352;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px 0;
+  display: block;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+  background-color: #7a6347;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Вопросы */
+.question {
+  margin-bottom: 40px;
+}
+
+.question h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #b03a2e;
+}
+
+.correct-answer,
+.user-answer {
+  background-color: #f4e5d1;
+  border: 2px solid #8c7352;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+/* Источник */
+.source {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Стиль ошибки */
+.error-message {
+  color: #b03a2e;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Правильный ответ */
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+/* Неправильный ответ */
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+/* Оформление списка результатов */
+.result-item {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.result-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.result-item li {
+  margin-bottom: 10px;
+}
+
+/* Основные стили остаются как есть */
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+    /* Уменьшаем отступы */
+    min-height: 80px;
+    /* Еще меньше высота */
+    background-size: cover;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header h1 {
+    font-size: 1.2em;
+    /* Уменьшаем заголовок */
   }
-  to {
-    transform: rotate(360deg);
+
+  header h2 {
+    font-size: 1em;
+    /* Уменьшаем подзаголовок */
+  }
+
+  main {
+    padding: 15px;
+    /* Уменьшаем отступы для основного контента */
+  }
+
+  button {
+    padding: 10px 20px;
+    /* Меньший размер кнопок */
+    font-size: 1em;
+    /* Уменьшаем шрифт на кнопках */
+  }
+
+  .question h3 {
+    font-size: 1.2em;
+    /* Уменьшаем заголовок вопроса */
+  }
+
+  .result-item {
+    margin-bottom: 20px;
+    /* Уменьшаем отступы между результатами */
+    padding: 10px;
+    /* Уменьшаем внутренние отступы */
+  }
+
+  footer {
+    padding: 10px 0;
+    /* Уменьшаем высоту футера */
+    font-size: 0.8em;
+    /* Уменьшаем размер шрифта в футере */
   }
 }
