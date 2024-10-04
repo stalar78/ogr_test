@@ -21,7 +21,7 @@ const Question = ({ data, handleAnswerClick }) => {
             <ul>
                 {data.options.map((option, index) => (
                     <li key={index}>
-                        <label>
+                        <label className="option-label">
                             <input
                                 type="radio"
                                 name="option"
