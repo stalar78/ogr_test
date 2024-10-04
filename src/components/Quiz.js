@@ -75,13 +75,13 @@ const Quiz = () => {
                         {randomQuestions.map((question, index) => {
                             const isCorrect = selectedAnswers[index] === question.correctAnswer;
                             return (
-                                <li key={index} className="result-item">
+                                <div key={index} className="result-item">
                                     <h3>{question.question}</h3>
 
-                                    {/* Показать варианты ответов */}
-                                    <ul>
+                                    {/* Показать варианты ответов как текст */}
+                                    <div>
                                         {question.options.map((option, i) => (
-                                            <li
+                                            <p
                                                 key={i}
                                                 className={
                                                     option === question.correctAnswer
@@ -92,15 +92,16 @@ const Quiz = () => {
                                                 }
                                             >
                                                 {option}
-                                            </li>
+                                            </p>
                                         ))}
-                                    </ul>
+                                    </div>
 
                                     <p className="source">Источник: {question.source}</p>
-                                </li>
+                                </div>
                             );
                         })}
                     </ul>
+
 
                     {/* Кнопка для начала теста заново */}
                     <button onClick={restartQuiz}>Начать сначала</button>

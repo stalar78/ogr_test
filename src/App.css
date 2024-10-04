@@ -223,12 +223,28 @@ button:hover {
 }
 
 /* Оформление списка результатов */
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
 .result-item {
   margin-bottom: 30px;
   padding: 15px;
   background-color: #f4f4f4;
   border: 2px solid #ddd;
   border-radius: 10px;
+}
+
+.source {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
 }
 
 .result-item ul {
