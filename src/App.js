@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Quiz from './components/Quiz'; // Убедитесь, что Quiz импортирован правильно
 
 function App() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch('http://212.67.11.96:8080/api/data')
+      .then(response => response.json())
+      .then(data => {
+        setData(data); // Сохраняем данные в состоянии
+      })
+      .catch(error => {
+        console.error("Ошибка:", error);
+      });
+  }, []);
+
   return (
     <div className="App">
       <header>
@@ -13,6 +25,14 @@ function App() {
       <main>
         {/* Подключаем компонент с тестами */}
         <Quiz />
+        {/* Отображаем данные из бэкенда */}
+        <div>
+          {data ? (
+            <p>Сообщение с бэкенда: {data.message}</p>
+          ) : (
+            <p>Загрузка данных...</p>
+          )}
+        </div>
       </main>
       <footer>© 2024 StaLar78</footer>
     </div>
